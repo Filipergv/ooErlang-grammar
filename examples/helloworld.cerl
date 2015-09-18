@@ -1,0 +1,7 @@
+-class(helloworld).
+-export([main/0]).
+
+class_methods.
+
+main() ->      
+    io:format("Hello World!").
