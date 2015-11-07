@@ -10,13 +10,13 @@ public class GenerateParseTree {
 
         if (args.length > 0) inputFile = args[0];
         InputStream is = System.in;
-        if ( inputFile!=null ) is = new FileInputStream(inputFile);
+        if (inputFile != null) is = new FileInputStream(inputFile);
 
         ANTLRInputStream input = new ANTLRInputStream(is);
         CerlLexer lexer = new CerlLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        CerlParser parser =  new CerlParser(tokens);
-        ParseTree tree =  parser.forms();
+        CerlParser parser = new CerlParser(tokens);
+        ParseTree tree = parser.forms();
         System.out.println(tree.toStringTree(parser));
     }
 }
